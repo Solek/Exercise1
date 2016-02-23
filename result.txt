@@ -1,20 +1,13 @@
-Name of object: "w·…€
-x·Øux·". Length is -nan, width is -0.000, height is -0.000.
-The total square of your object "w·…€
-x·Øux·" is -nan.
+Name of object: "name". Length is 5.000, width is 5.000, height is 5.000.
+The total square of your object "name" is 150.000.
 
-Name of object: "w·…€
-x·Øux·". Length is -nan, width is -0.000, height is -0.000.
-The total square of your object "w·…€
-x·Øux·" is -nan.
+Name of object: "name_new1". Length is 2.000, width is 1.000, height is 2.000.
+The total square of your object "name_new1" is 16.000.
 
-Name of object: "w·…€
-x·Øux·". Length is -nan, width is -0.000, height is -0.000.
-The total square of your object "w·…€
-x·Øux·" is -nan.
+Name of object: "namename". Length is 3.000, width is 3.000, height is 3.000.
+The total square of your object "namename" is 54.000.
 
-Name of object: "w·…€
-x·Øux·". Length is -nan, width is -0.000, height is -0.000.
-The total square of your object "w·…€
-x·Øux·" is -nan.
+Object "naaaame" doesn't exist!
+
+Object "name_new1" has the smallest square 16.000!
 
