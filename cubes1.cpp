@@ -14,12 +14,20 @@ int main()
 	char name[20];
 	char name1[20];
 	char temp[40];
-	std::stringstream min_line;
+	char filename_i[256];
+	char filename_o[256];
+
+	printf("Type name of your file please: \n");
+	std::cin.getline(filename_i, 256);
+	printf("\nThanks! Now, how your output file should be called? \n");
+	std::cin.getline(filename_o, 256);
+	printf("\n");
+
 
 	FILE * input;
-	input = fopen("input.txt", "rt");
+	input = fopen(filename_i, "rt");
     FILE * output;
-    output = fopen("result.txt", "wt");
+    output = fopen(filename_o, "wt");
 
     while (fgets(temp, 200, input) != NULL)
     	{

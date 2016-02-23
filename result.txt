@@ -1,3 +1,3 @@
 Smallest square between all existing objects is 16.000!
 
-Name of object: "name_new1". Length is 2.000, width is 1.000, height is 2.000.
+Name of object is "name_new1". Length is 2.000, width is 1.000 and height is 2.000.
