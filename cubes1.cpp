@@ -9,10 +9,12 @@ using namespace std;
 int main()
 {
 	float length, width, height, total;
-	float prev_total = 10000000;
+	float length1, width1, height1;
+	float min_total = 10000000;
 	char name[20];
-	char name_smallest[20];
+	char name1[20];
 	char temp[40];
+	std::stringstream min_line;
 
 	FILE * input;
 	input = fopen("input.txt", "rt");
@@ -22,27 +24,23 @@ int main()
     while (fgets(temp, 200, input) != NULL)
     	{
     	std::stringstream ss_line;
+
     	ss_line << temp;
     	ss_line >> name >> length >> width >> height;
     	std::cout << name << " " << length << " " << width << " " << height <<'\n';
-
-        if (length > 0 && width > 0 && height > 0)
-        {
-
-        	fprintf(output, "Name of object: \"%s\". Length is %.3f, width is %.3f, height is %.3f.\n", name, length, width, height);
-        	total = 2 * (length * height + length * width + height * width);
-        	if (total < prev_total)
-        		{
-        		prev_total = total;
-        		strcpy(name_smallest, name);
-        		}
-        	fprintf(output, "The total square of your object \"%s\" is %.3f.\n\n", name, total);
-        }
-        else
-        	fprintf(output, "Object \"%s\" doesn't exist!\n\n", name);
+    	total = 2 * (length * height + length * width + height * width);
+        if (length > 0 && width > 0 && height > 0 && total < min_total)
+        	{
+        	strcpy(name1, name);
+        	length1 = length;
+        	width1 = width;
+        	height1 = height;
+        	min_total = total;
+        	}
     	}
 
-    fprintf(output, "Object \"%s\" has the smallest square %.3f!\n\n", name_smallest, prev_total);
+    fprintf(output, "Smallest square between all existing objects is %.3f!\n\n", min_total);
+    fprintf(output, "Name of object is \"%s\". Length is %.3f, width is %.3f and height is %.3f.\n", name1, length1, width1, height1);
 
     fclose(input);
     fclose(output);
