@@ -11,11 +11,10 @@ int main()
 	float min_total = 10000000;
 	char name[20];
 	char name_of_min[20];
-	char temp_line[50];
 	char filename_i[256];
 	char filename_o[256];
 	
-	std::cout << "Type name of your file please: \n";
+	std::cout << "Type name of your input file please: \n";
 	std::cin.getline(filename_i, 256);
 	std::cout << "\nThanks! Now, how your output file should be called? \n";
 	std::cin.getline(filename_o, 256);
@@ -29,23 +28,25 @@ int main()
 	
 	while(input.eof())
 		{
-			std::stringstream ss_line;
-			std::string temp_line;
-    		getline(input, temp_line);
+		std::stringstream ss_line;
+		std::string temp_line;
+    	getline(input, temp_line);
     
-			for (std::size_t i = 0; i < temp_line.length(); ++i) 
-			
+		for (std::size_t i = 0; i < temp_line.length(); i++) 
+			{
 			ss_line << temp_line;
 			ss_line >> name >> length >> width >> height;
 			std::cout << name << " " << length << " " << width << " " << height <<'\n';
 			total = 2 * (length * height + length * width + height * width);
-			if (length > 0 && width > 0 && height > 0 && total < min_total)
-			{
-				strcpy(name_of_min, name);
+			
+			if (length > 0 && width > 0 && height > 0 && total < min_total)		
+				{
+				strcpy(name_of_min, name);  // c?
 				length_of_min = length;
 				width_of_min = width;
 				height_of_min = height;
 				min_total = total;
+				}
 			}
 		}
 	

@@ -1,3 +1,3 @@
 Smallest square between all existing objects is 1e+007!
 
-Name of object is "á@". Length is 0, width is 2.75932e+033 and height is 0.
+Name of object is "è@". Length is 0, width is 2.75932e+033 and height is 0.
